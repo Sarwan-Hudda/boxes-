@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="boxes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Boxes</title>
+
+</head>
+<body>
+    <div class="wrapper">
+        <box class="content"> 
+            <div class="icon">
+                <h2>Heading  <i class="fa-solid fa-plus"></i></h2>
+               
+            </div>
+            <div class="para">
+                <p>Lorem ipsum dolor sit amet, consectetur  adipisicing elit. Id, debitis!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur  adipisicing elit. Id, debitis!</p>
+                <a href="">Click Me</a>
+            </div>
+        
+        </box>
+        <box class="content"> 
+            <div class="icon">
+                <h2>Heading <i class="fa-solid fa-plus"></i></h2>
+                
+            </div>
+            <div class="para">
+                <p>Lorem ipsum dolor sit amet, consectetur  adipisicing elit. Id, debitis!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur  adipisicing elit. Id, debitis!</p>
+                <a href="">Click Me</a>
+            </div>
+        </box>
+        <box class="content"> 
+            <div class="icon">
+                <h2>Heading <i class="fa-solid fa-plus"></i></h2>
+                
+            </div>
+            <div class="para">
+                <p>Lorem ipsum dolor sit amet, consectetur  adipisicing elit. Id, debitis!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur  adipisicing elit. Id, debitis!</p>
+                <a href="">Click Me</a>
+            </div>
+        </box>
+        <box class="content"> 
+            <div class="icon">
+                <h2>Heading <i class="fa-solid fa-plus"></i></h2>
+               
+            </div>
+              <div class="para">
+                <p>Lorem ipsum dolor sit amet, consectetur  adipisicing elit. Id, debitis!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur  adipisicing elit. Id, debitis!</p>
+                <a href="">Click Me</a>
+            </div>
+        </box>
+    </div>
+    <script>
+        let anchors = document.querySelectorAll('a');
+        let icons = document.querySelectorAll('.icon i')
+        for(let i =0; i<icons.length; i++){
+            icons[i].onclick = function(){
+                let children = icons[i].parentElement.parentElement.nextElementSibling.children
+                for(let j=0; j<icons.length; j++){
+                    if(j==2){
+                        children[j].style.display = 'block'
+                    }
+                    else{
+                    children[j].style.display = 'none'
+                }
+                    
+                }
+                
+            }
+            
+        }
+                    for(let i=0; i<anchors.length; i++){
+                        anchors[i].onclick = function(e){
+                            e.preventDefault();
+                            let anchor = anchors[i].parentElement.children;
+                            for(let n =0; n<anchor.length; n++){
+                                if(n==2){
+                                    anchor[n].style.display = 'none'
+                                }
+                                else{
+                                anchor[n].style.display = 'block'
+                            }
+                            }
+                        }
+                    }
+             
+    </script>
+    
+</body>
+</html>
