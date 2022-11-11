@@ -15,3 +15,10 @@
     text-decoration: none;
     display: none;
 }
+
+.icon h2{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    width: 323px;
+}
